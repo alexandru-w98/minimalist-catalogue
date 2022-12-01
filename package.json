@@ -1,0 +1,30 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000m\u0000i\u0000n\u0000i\u0000m\u0000a\u0000l\u0000i\u0000s\u0000t\u0000-\u0000c\u0000a\u0000t\u0000a\u0000l\u0000o\u0000g\u0000u\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandru-w98/minimalist-catalogue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandru-w98/minimalist-catalogue/issues"
+  },
+  "homepage": "https://github.com/alexandru-w98/minimalist-catalogue#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^2.2.0",
+    "sass": "^1.56.1",
+    "vite": "^3.2.4"
+  }
+}
