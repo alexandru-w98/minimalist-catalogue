@@ -1,4 +1,4 @@
-import hideIcon from "../../../assets/icons/show-hide/hide.svg";
+import hideIcon from "../icons/hide.svg";
 
 const VARIANTS = {
   primary: {},
