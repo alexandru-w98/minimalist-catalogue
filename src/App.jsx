@@ -1,18 +1,22 @@
 import React from "react";
 import styles from "./App.module.scss";
-import Input from "./components/input";
+import Button from "./components/button";
 import "./normalize.module.scss";
 
 const App = () => {
   return (
     <div className={styles["test"]}>
-      <Input
+      {/* <Input
         placeholder="Email"
         primary
         type="password"
         icon="default"
         size="normal"
-      />
+      /> */}
+
+      <Button className={styles["button"]} size="normal">
+        Login
+      </Button>
     </div>
   );
 };
