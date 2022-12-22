@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./App.module.scss";
-import Button from "./components/button";
+import Checkbox from "./components/checkbox";
 import "./normalize.module.scss";
 
 const App = () => {
@@ -14,9 +14,17 @@ const App = () => {
         size="normal"
       /> */}
 
-      <Button className={styles["button"]} size="normal">
+      {/* <Button className={styles["button"]} size="normal">
         Login
-      </Button>
+      </Button> */}
+
+      <Checkbox
+        label={"Remember me"}
+        checked={true}
+        onChange={() => {
+          console.log("asd");
+        }}
+      />
     </div>
   );
 };
