@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./App.module.scss";
-import Checkbox from "./components/checkbox";
+import Dropdown from "./components/dropdown";
 import "./normalize.module.scss";
 
 const App = () => {
+  const items = [
+    { id: "1", label: "Category 1" },
+    { id: "2", label: "Category 2" },
+    { id: "3", label: "Category 3" },
+  ];
+
   return (
     <div className={styles["test"]}>
       {/* <Input
@@ -18,13 +24,15 @@ const App = () => {
         Login
       </Button> */}
 
-      <Checkbox
+      {/* <Checkbox
         label={"Remember me"}
         checked={true}
         onChange={() => {
           console.log("asd");
         }}
-      />
+      /> */}
+
+      <Dropdown label={"Sort by:"} header={"Category"} items={items} />
     </div>
   );
 };
