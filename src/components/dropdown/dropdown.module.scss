@@ -31,11 +31,9 @@
     list-style: none;
     width: 100%;
     box-shadow: 0px 0px 5px 3px rgb(238, 238, 238);
-    padding: 6px;
 
     display: flex;
     flex-direction: column;
-    row-gap: 3px;
     font-weight: 700;
     color: #9b9b9b;
   }
@@ -44,6 +42,7 @@
 .list {
   &__item {
     user-select: none;
+    padding: 6px;
   }
 
   &__item:hover {

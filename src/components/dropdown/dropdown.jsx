@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./dropdown.module.scss";
 
-const Dropdown = ({ label, header, items }) => {
+const Dropdown = ({ label, header, items, ...props }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [selected, setSelected] = useState(null);
 
@@ -36,7 +36,12 @@ const Dropdown = ({ label, header, items }) => {
   };
 
   return (
-    <div className={styles["dropdown"]} onBlur={onDropdownBlured} tabIndex="0">
+    <div
+      className={styles["dropdown"]}
+      onBlur={onDropdownBlured}
+      tabIndex="0"
+      {...props}
+    >
       {label && <div className={styles["dropdown__label"]}>{label}</div>}
       <div className={styles["dropdown__content"]}>
         <div className={headerStyles} onClick={onHeaderClicked}>
