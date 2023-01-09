@@ -26,12 +26,9 @@ const Input = ({ className, type, icon, size, onClick, ...others }) => {
     if (typeDefault) {
       setInputType(typeDefault.INPUT_TYPE);
 
-      if (icon === "default") {
-        setInputIcon(typeDefault.ICON);
-      }
-
       if (!onClick && type === "password") {
         setOnIconClick(onPasswordIconClick);
+        setInputIcon(hideIcon);
       }
     }
   }, []);
@@ -56,13 +53,13 @@ const Input = ({ className, type, icon, size, onClick, ...others }) => {
         className={styles["input"]}
         {...others}
       />
-      {icon && (
+      {(icon || inputIcon) && (
         <div className={styles["input__icon-container"]}>
           <img
-            style={onIconClick ? cursorPointer : null}
-            onClick={onIconClick}
+            style={onClick || onIconClick ? cursorPointer : null}
+            onClick={onClick || onIconClick}
             className={styles["icon-container__img"]}
-            src={inputIcon}
+            src={icon || inputIcon}
           />
         </div>
       )}
