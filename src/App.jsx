@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar";
 import Button from "./components/button";
 
 import "./normalize.module.scss";
+import Foooter from "./components/foooter";
 
 const App = () => {
   // ********* SEARCH *********
@@ -62,6 +63,22 @@ const App = () => {
     ],
   };
 
+  const footerLinks = [
+    { id: 1, href: "#", label: "IT" },
+    { id: 2, href: "#", label: "CONTACTS" },
+    { id: 3, href: "#", label: "PRIVACY & COOKIE POLICY" },
+    { id: 4, href: "#", label: "TERMS OF USE" },
+    { id: 6, href: "#", label: "ECO-AWARE" },
+    { id: 7, href: "#", label: "NEWSLETTER" },
+    { id: 8, href: "#", label: "ECO-AWARE" },
+    { id: 9, href: "#", label: "COOKIE PREFERENCES" },
+    { id: 10, href: "#", label: "INSTAGRAM" },
+    { id: 11, href: "#", label: "FACEBOOK" },
+  ];
+
+  const subText =
+    "OWENSCORP ITALIA SPA, VIA M. PONZA N 4, 10121, TORINO, ITALY, VAT IT07725270016, REA- TO915864, 1.000.000 I.V., PH +390115818697 CUSTOMERCARE@RICKOWENS.EU";
+
   return (
     <>
       <Navbar links={links} isBurgerMenu />
@@ -96,6 +113,7 @@ const App = () => {
           options={{ searchOnType: true }}
         /> */}
       </div>
+      <Foooter links={footerLinks} subText={subText} />
     </>
   );
 };
