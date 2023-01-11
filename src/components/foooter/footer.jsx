@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./footer.module.scss";
 
-const Footer = ({ links, subText }) => {
+const Footer = ({ links, subText, className }) => {
   const footerLinks = links.map((link, index) => (
     <li
       key={link.id}
@@ -16,7 +16,7 @@ const Footer = ({ links, subText }) => {
   ));
 
   return (
-    <div className={`${styles["footer"]} ${styles["sticky"]}`}>
+    <div className={`${styles["footer"]} ${className}`}>
       <div className={styles["footer__content"]}>
         <ul className={styles["footer__links"]}>{footerLinks}</ul>
         <span className={styles["footer__subtext"]}>{subText}</span>
@@ -30,9 +30,11 @@ export default Footer;
 Footer.propTypes = {
   links: PropTypes.arrayOf(PropTypes.object),
   subText: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Footer.defaultProps = {
   links: [],
   subText: "",
+  className: "",
 };
